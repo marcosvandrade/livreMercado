@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=C:\Users\vasco\git\livreMercado"
+set "VIRTUAL_ENV=C:\Users\vasco\git\django_ecommerce"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
