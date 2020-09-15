@@ -3,11 +3,11 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 class ContactForm(forms.Form):
-    full_name = forms.CharField(
+    nome_completo = forms.CharField(
         widget=forms.TextInput(
             attrs={
                     "class": "form-control", 
-                    "placeholder": "Seu nome completo"
+                    "placeholder": "Digite nome completo..."
                 }
             )
         )
@@ -15,15 +15,15 @@ class ContactForm(forms.Form):
         widget=forms.EmailInput(
             attrs={
                     "class": "form-control", 
-                    "placeholder": "Digite seu email"
+                    "placeholder": "Digite seu email..."
                 }
             )
         )
-    content   = forms.CharField(
+    texto   = forms.CharField(
         widget=forms.Textarea(
             attrs={
                     "class": "form-control", 
-                    "placeholder": "Digite sua mensagem"
+                    "placeholder": "Digite sua mensagem.."
                 }
             )
         )
