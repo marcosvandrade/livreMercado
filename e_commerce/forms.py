@@ -35,14 +35,53 @@ class ContactForm(forms.Form):
         return email
 
 class LoginForm(forms.Form):
-    username = forms.CharField()
-    password = forms.CharField(widget=forms.PasswordInput)
+    usuário = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                    "class": "form-control", 
+                    "placeholder": "Digite seu usuário..."
+                }
+            )
+    )
+    senha = forms.CharField(widget=forms.PasswordInput(
+            attrs={
+                    "class": "form-control", 
+                    "placeholder": "Digite sua senha..."
+                }
+            )
+    )
 
 class RegisterForm(forms.Form):
-    username = forms.CharField()
-    email = forms.EmailField()
-    password = forms.CharField(widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirm password', widget=forms.PasswordInput)
+    usuário = forms.CharField(
+        widget=forms.TextInput(
+            attrs={
+                    "class": "form-control", 
+                    "placeholder": "Digite o seu usuário..."
+                }
+            )
+    )
+    email = forms.EmailField(
+        widget=forms.TextInput(
+            attrs={
+                    "class": "form-control", 
+                    "placeholder": "Digite seu e-mail..."
+                }
+            )
+    )
+    senha = forms.CharField(widget=forms.PasswordInput(
+            attrs={
+                    "class": "form-control", 
+                    "placeholder": "Digite sua senha..."
+                }
+            )
+    )
+    senha2 = forms.CharField(label='Confirme a senha', widget=forms.PasswordInput(
+            attrs={
+                    "class": "form-control", 
+                    "placeholder": "Repita sua senha..."
+                }
+            )
+    )
 
     def clean_username(self):
         username = self.cleaned_data.get('username')

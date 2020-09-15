@@ -1,4 +1,4 @@
-<div class="card" style="width: 14rem;">
+<div class="card mt-2" style="width: 14rem;">
     {% if instance.image %}
         <a href="{{ instance.get_absolute_url }}">
             <img src="{{ instance.image.url }}" class="card-img-top" alt="{{ instance.title }} logo">
@@ -6,6 +6,7 @@
     {% endif %}
     <div class="card-body">
         <h6 class="card-title">{{ instance.title }}</h6>
+        <h6 class="card-title"><b>R$ {{ instance.price }}</b></h6>
         {% comment %} <p class="card-text">{{ instance.description|truncatewords:14 }}</p> {% endcomment %}
         <a href="{{ instance.get_absolute_url }}" class="btn btn-outline-success btn-lg btn-block">Detalhes</a>
         {% comment %} <a href="{% url 'products:detail' slug=instance.slug %}" class="btn btn-warning">Atalho para a URL</a> {% endcomment %}

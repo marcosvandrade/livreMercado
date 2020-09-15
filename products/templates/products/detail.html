@@ -5,12 +5,14 @@
     <div class='row'>
         <div class='col'>
             <h1>{{ object.title }}</h1>
+            <h2 class="card-title">R$ {{ object.price }}</h2>
             {% comment %} {{ object.timestamp|timesince }} atrás {% endcomment %}
             {% comment %} <h3>{{ "Um título qualquer"|title }}</h3> {% endcomment %}
             {{ object.description|linebreaks }} <br/>
             {% if object.image %}
-                <img src='{{ object.image.url }}' class='img-fluid'/>
+                <img src='{{ object.image.url }}' style="width: 25rem; />
             {% endif %}
+
         </div>
     </div>
 
