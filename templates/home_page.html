@@ -2,22 +2,27 @@
 
 {% load static %}
 
-<title>Home Page</title>
+<title>Livre Mercado</title>
 
 {% block base_head %}
     <link rel='stylesheet' href='{% static "css/main.css" %}'>
 {% endblock %}
     
 {% block content %}
-    <div class='text-center'>
+    {% comment %} <div class='text-center'>
          <h1>{{ title }}</h1>
              <p>{{ content }}</p>
-    </div>
+		
+    </div> {% endcomment %}
     
+	<div class="row">
+		<img src="{% static 'img/logo.jpeg' %}" style="width: 15%", "display: block", "margin-left: auto", "margin-right: auto"; />
+	</div>	
+
 	<div class='row'>
 		<div class='col'>
-		<img src="{% static 'img/ecommerce.png' %}" class='img-fluid' />
-		<p>{{ content }}</p>
+		<img src="{% static 'img/ecommerce.png' %}" style="width: 80%"; />
+		{% comment %} <p>{{ content }}</p> {% endcomment %}
 		</div>
 	</div>
 

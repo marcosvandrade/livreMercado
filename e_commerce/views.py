@@ -6,8 +6,9 @@ from .forms import ContactForm, LoginForm, RegisterForm
 
 def home_page(request):
     context = {
-                    "title": "Livre Mercado",
-                    "content": "Boas Compras!",
+                    # "title": "Livre Mercado",
+                    # "content": "Boas Compras!",
+                    # "logo": {img src="@/media/logo.jpg"}
               }
     if request.user.is_authenticated:
         context["premium_content"] = "Você é um usuário Premium"
