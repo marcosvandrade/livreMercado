@@ -7,13 +7,6 @@
 {% load static %}
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
   <div class='container'>
-    {% comment %} <a class="navbar-brand" href="{{ home_url }}">
-      <img src="https://getbootstrap.com/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      {% if nome_da_marca %} 
-      {{ nome_da_marca }} 
-      {% else %} C&oacute;digo Fluente eCommerce 
-      {% endif %}
-    </a> {% endcomment %}
     <a class="navbar-brand" href="{{ home_url }}">
       <img src="{% static 'img/logo3.png' %}" width="50" height="50" class="d-inline-block align-top ml-1 mb-0 mt-0" alt="" />
     </a>
@@ -43,17 +36,7 @@
           <a class="nav-link" href="{{ register_url }}">Registre-se</a> 
         </li>
       {% endif %}
-        {% comment %} <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown link
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li> {% endcomment %}
-      </ul>
+     </ul>
       {% include 'search/snippets/search-form.html' %}
     </div>
   </div><!--fim container-->
