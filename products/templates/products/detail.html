@@ -5,6 +5,7 @@
     <div class='row'>
         <div class='col'>
             <h1>{{ object.title }}</h1>
+            {{ object.timestamp|timesince }} atrás
             <h2 class="card-title">R$ {{ object.price }}</h2>
                 {{ object.description|linebreaks }} <br/>
             {% if object.image %}
