@@ -1,0 +1,13 @@
+
+<div class="card mt-2" style="width: 14rem;">
+    {% if instance.image %}
+        <a href="{{ instance.get_absolute_url }}">
+            <img src="{{ instance.image.url }}" class="card-img-top" alt="{{ instance.title }} logo">
+        </a>
+    {% endif %}
+    <div class="card-body">
+        <h6 class="card-title">{{ instance.title }}</h6>
+        <h6 class="card-title"><b>R$ {{ instance.price }}</b></h6>
+        <a href="{{ instance.get_absolute_url }}" class="btn btn-outline-success btn-lg btn-block">Detalhes</a>
+    </div>
+</div>
